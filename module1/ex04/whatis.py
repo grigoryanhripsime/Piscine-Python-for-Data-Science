@@ -1,15 +1,13 @@
 import sys
 
-if len(sys.argv) == 1:
-    sys.exit()
-if len(sys.argv) > 2:
-    print("AssertionError: more than one argument is provided")
-    sys.exit()
-
 try:
-    n = int(sys.argv[1])
-except ValueError:
-    print("AssertionError: argument is not an integer")
-    sys.exit()
-
-print("I'm Even" if n % 2 == 0 else "I'm Odd")
+    if len(sys.argv) > 2:
+        raise AssertionError("more than one argument is provided")
+    elif len(sys.argv) > 1:
+        try:
+            n = int(sys.argv[1])
+        except ValueError:
+            raise AssertionError("argument is not an integer")
+        print("I'm Even." if n % 2 == 0 else "I'm Odd.")
+except AssertionError as error:
+    print(AssertionError.__name__ + ":", error)
