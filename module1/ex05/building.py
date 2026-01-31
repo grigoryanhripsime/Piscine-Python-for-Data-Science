@@ -1,7 +1,6 @@
 import sys
 import string
 
-res = [i for i in range(10) if i % 2 == 0]
 
 def calc_symbols(user_input):
     """
@@ -34,10 +33,9 @@ def main():
         if len(sys.argv) > 2:
             raise AssertionError("Too many arguments provided")
         if len(sys.argv) == 1:
-            print("What is the text to count?")
             try:
-                text = sys.stdin.read()
-            except KeyboardInterrupt:
+                text = input("What is the text to count?\n")
+            except Exception:
                 return
         else:
             text = sys.argv[1]

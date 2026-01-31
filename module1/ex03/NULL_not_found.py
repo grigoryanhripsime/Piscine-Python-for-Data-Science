@@ -1,9 +1,7 @@
-import math
-
 def NULL_not_found(object: any) -> int:
     if object is None:
         heading = "Nothing"
-    elif type(object) == float and math.isnan(object):
+    elif type(object) == float and object != object:
         heading = "Cheese"
     elif type(object) == int and object == 0:
         heading = "Zero"
