@@ -1,4 +1,6 @@
-def give_bmi(height: list[int | float], weight: list[int | float]) -> list[int | float]:
+def give_bmi(
+    height: list[int | float], weight: list[int | float]
+) -> list[int | float]:
     """
     Calculate the BMI for each pair of height and weight values.
     """
