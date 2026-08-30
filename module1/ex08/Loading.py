@@ -23,3 +23,15 @@ def ft_tqdm(lst: range) -> None:
         yield value
 
     print()
+
+
+def main():
+    """
+    Just a progress bar.
+    """
+    for elem in ft_tqdm(range(100000)):
+        pass
+
+
+if (__name__ == "__main__"):
+    main()
